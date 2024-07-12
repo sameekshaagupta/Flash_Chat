@@ -29,7 +29,7 @@ async function registerUser(request,response){
         const userSave = await user.save()
 
         return response.status(201).json({
-            message : "User created successfully",
+            message : "Account created successfully",
             data : userSave,
             success : true
         })
