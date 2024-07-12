@@ -13,6 +13,7 @@ import { FaImage } from "react-icons/fa6";
 import { FaVideo } from "react-icons/fa6";
 import { logout } from '../redux/userSlice';
 
+
 const Sidebar = () => {
     const user = useSelector(state => state?.user)
     const [editUserOpen,setEditUserOpen] = useState(false)

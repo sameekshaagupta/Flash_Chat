@@ -163,10 +163,11 @@ const MessagePage = () => {
                       />
                   </div>
                   <div>
-                     <h3 className='font-semibold text-lg my-0 text-ellipsis line-clamp-1'>{dataUser?.name}</h3>
+                     <h3 className='font-semibold 
+                     -0 text-lg ptext-ellipsis line-clamp-1'>{dataUser?.name}</h3>
                      <p className='-my-2 text-sm'>
                       {
-                        dataUser.online ? <span className='text-primary'>online</span> : <span className='text-slate-400'>offline</span>
+                        dataUser.online ? <span className='text-primary text-xs'>online</span> : <span className='text-xs text-slate-400'>offline</span>
                       }
                      </p>
                   </div>

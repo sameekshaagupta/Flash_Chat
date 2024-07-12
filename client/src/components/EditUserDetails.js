@@ -85,48 +85,52 @@ const EditUserDetails = ({onClose,user}) => {
   return (
     <div className='fixed top-0 bottom-0 left-0 right-0 bg-gray-700 bg-opacity-40 flex justify-center items-center z-10'>
         <div className='bg-white p-4 py-6 m-1 rounded w-full max-w-sm'>
-            <h2 className='font-semibold'>Profile Details</h2>
-            <p className='text-sm '>Edit user details</p>
+            <h2 className='font-semibold text-center'>Profile Details</h2>
+            <p className='text-sm mt-1'>Edit user details</p>
 
             <form className='grid gap-3 mt-3' onSubmit={handleSubmit}>
                 <div className='flex flex-col gap-1'>
-                    <label htmlFor='name'>Name:</label>
+                    <label className='text-sm' htmlFor='name'>Name:</label>
                     <input
                         type='text'
                         name='name'
                         id='name'
                         value={data.name}
                         onChange={handleOnChange}
-                        className='w-full py-1 px-2 focus:outline-primary border-0.5'
+                        className='w-full py-1 px-2 focus:outline-primary border-2 border-[#1c83b5] rounded bg-slate-200'
                     />
                 </div>
 
                 <div>
-                    <div>Photo:</div>
-                    <div className='my-1 flex items-center gap-4'>
-                        <Avatar
-                            width={40}
-                            height={40}
-                            imageUrl={data?.profile_pic}
-                            name={data?.name}
-                        />
+                    <div className='text-sm'>Profile Pic:</div>
+                    <div>
+                        <div className='flex justify-center items-center'>
+                            <Avatar
+                                width={100}
+                                height={100}
+                                imageUrl={data?.profile_pic}
+                                name={data?.name}
+                            />
+                        </div>
                         <label htmlFor='profile_pic'>
-                        <button className='font-semibold' onClick={handleOpenUploadPhoto}>Change Photo</button>
-                        <input
-                            type='file'
-                            id='profile_pic'
-                            className='hidden'
-                            onChange={handleUploadPhoto}
-                            ref={uploadPhotoRef}
-                        />
+                            <div className='flex justify-center items-center relative'>
+                                <button className='font-semibold my-2 bg-slate-200 rounded py-1 px-3 text-sm border-2 border-[#1c83b5]' onClick={handleOpenUploadPhoto}>Change Photo</button>
+                                    <input
+                                        type='file'
+                                        id='profile_pic'
+                                        className='hidden'
+                                        onChange={handleUploadPhoto}
+                                        ref={uploadPhotoRef}
+                                    />
+                                </div>
                         </label>
                     </div>
                 </div>
 
                 <Divider/>    
-                <div className='flex gap-2 w-fit ml-auto '>
-                    <button onClick={onClose} className='border-primary border text-primary px-4 py-1 rounded hover:bg-primary hover:text-white'>Cancel</button>
-                    <button onClick={handleSubmit} className='border-primary bg-primary text-white border px-4 py-1 rounded hover:bg-secondary'>Save</button>
+                <div className='flex mt-2 justify-center gap-3'>
+                    <button onClick={onClose} className='font-semibold bg-slate-200 rounded py-1 px-3 text-sm border-2 border-[#1c83b5]'>Cancel</button>
+                    <button onClick={handleSubmit} className='font-semibold bg-[#b9e6ed] rounded py-1 px-3 text-sm border-2 border-[#1c83b5]'>Save</button>
                 </div>
             </form>
         </div>

@@ -78,10 +78,10 @@ const CheckPasswordPage = () => {
                   name={location?.state?.name}
                   imageUrl={location?.state?.profile_pic}
                 />
-                <h2 className='font-semibold text-blue-700 text-lg mt-1'>{location?.state?.name}</h2>
+                <h2 className='font-semibold text-lg mt-1'>{location?.state?.name}</h2>
             </div>
 
-          <form className='grid gap-4 mt-3' onSubmit={handleSubmit}>
+          <form className='grid gap-3 mt-5' onSubmit={handleSubmit}>
               
 
           <div className='flex flex-col gap-1'>
@@ -90,7 +90,7 @@ const CheckPasswordPage = () => {
                   type='password'
                   id='password'
                   name='password'
-                  placeholder='enter your password' 
+                  placeholder='Enter your password' 
                   className='bg-slate-100 px-2 py-1 focus:outline-primary'
                   value={data.password}
                   onChange={handleOnChange}
@@ -99,14 +99,14 @@ const CheckPasswordPage = () => {
               </div>
 
               <button
-               className='bg-primary text-lg  px-4 py-1 hover:bg-secondary rounded mt-2 font-bold text-white leading-relaxed tracking-wide'
+               className='bg-primary text-lg  px-4 py-1 hover:bg-secondary rounded mt-2 font-semibold text-white leading-relaxed tracking-wide'
               >
-                Login
+                Sign In
               </button>
 
           </form>
 
-          <p className='my-3 text-center'><Link to={"/forgot-password"} className='hover:text-primary font-semibold'>Forgot password ?</Link></p>
+          <p className='my-3 text-center'><Link to={"/forgot-password"} className='text-[#39227D] font-semibold hover:underline'>Forgot password ?</Link></p>
         </div>
     </div>
   )

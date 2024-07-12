@@ -75,7 +75,7 @@ const Home = () => {
         <div className={`justify-center items-center flex-col gap-2 hidden ${!basePath ? "hidden" : "lg:flex" }`}>
             <div>
               <img
-                src={logo}
+                src='https://media1.tenor.com/images/9969d2bc836ee216a3319d0c15d8ad35/tenor.gif%3fitemid%3d16242995'
                 width={250}
                 alt='logo'
               />
