@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import { IoClose } from "react-icons/io5";
 import { Link, useNavigate } from 'react-router-dom';
-import uploadFile from '../helpers/uploadFile';
 import axios from 'axios'
 import toast from 'react-hot-toast';
 import { PiUserCircle } from "react-icons/pi";
@@ -58,7 +56,7 @@ const CheckEmailPage = () => {
                 />
             </div>
 
-          <h3>Welcome to Chat app!</h3>
+          <h3 className='font-bold text-center' >Welcome to Flash Chat!</h3>
 
           <form className='grid gap-4 mt-3' onSubmit={handleSubmit}>
               
@@ -69,7 +67,7 @@ const CheckEmailPage = () => {
                   type='email'
                   id='email'
                   name='email'
-                  placeholder='enter your email' 
+                  placeholder='Enter your email' 
                   className='bg-slate-100 px-2 py-1 focus:outline-primary'
                   value={data.email}
                   onChange={handleOnChange}
@@ -78,14 +76,14 @@ const CheckEmailPage = () => {
               </div>
 
               <button
-               className='bg-primary text-lg  px-4 py-1 hover:bg-secondary rounded mt-2 font-bold text-white leading-relaxed tracking-wide'
+               className='bg-primary text-lg  px-4 py-1 hover:bg-secondary rounded mt-2 font-semibold text-white leading-relaxed tracking-wide'
               >
-                Let's Go
+                Verify Email
               </button>
 
           </form>
 
-          <p className='my-3 text-center'>New User ? <Link to={"/register"} className='hover:text-primary font-semibold'>Register</Link></p>
+          <p className='my-3 text-center'>New User ? <Link to={"/register"} className='text-[#39227D] font-semibold hover:underline'>Register</Link></p>
         </div>
     </div>
   )
