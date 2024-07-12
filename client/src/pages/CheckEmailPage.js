@@ -83,7 +83,7 @@ const CheckEmailPage = () => {
 
           </form>
 
-          <p className='my-3 text-center'>New User ? <Link to={"/register"} className='text-[#39227D] font-semibold hover:underline'>Register</Link></p>
+          <p className='my-3 text-center'>New User? <Link to={"/register"} className='text-[#39227D] font-semibold hover:underline'>Register</Link></p>
         </div>
     </div>
   )
